@@ -37,6 +37,6 @@ and
 python setup_yank.py --receptor abl/3UE4-pdbfixer.pdb --ligand Bosutinib.mol2
 ```
 
-create a setup folder to run Yank respectively on 2HYY and imatinib in explicit solvent and 3UE4 and bosutinib in implicit solvent.
+create a setup folder to run Yank respectively on 2HYY and imatinib in explicit solvent and 3UE4 and bosutinib in implicit solvent. The ligand will have residue name "MOL".
 
 The script uses a simple heuristic algorithm to ensure that the receptor and the ligand are very close and do not overlap at the beginning of the simulation.
