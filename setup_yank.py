@@ -145,12 +145,12 @@ def pull_close(receptor_oemol, ligand_oemol, min_bound, max_bound):
 
 # Main function
 #----------------------------
-def main(receptor_file_name, ligand_file_name, solvate=False):
+def main(receptor_file_name, ligand_file_name, setup_directory_name, solvate=False):
 
     # Cleanup setup directory
-    if os.path.exists(SETUP_DIR):
-        shutil.rmtree(SETUP_DIR)
-    os.makedirs(SETUP_DIR)
+    if os.path.exists(setup_directory_name):
+        shutil.rmtree(setup_directory_name)
+    os.makedirs(setup_directory_name)
 
     # Read ligand and receptor molecule
     ifs_mol2 = oechem.oemolistream()
@@ -175,7 +175,7 @@ def main(receptor_file_name, ligand_file_name, solvate=False):
         oechem.OEAtomSetResidue(atom, residue)
 
     # Parametrize ligand
-    with working_directory(SETUP_DIR):
+    with working_directory(setup_directory_name):
 
         # Save translated ligand
         ofs = oechem.oemolostream()
@@ -213,5 +213,6 @@ if __name__ == '__main__':
 
     receptor_file_name = os.path.join(KINASES_DIR, args.receptor)
     ligand_file_name = os.path.join(LIGANDS_DIR, args.ligand)
+    setup_directory_name = os.path.join(SETUP_DIR, args.receptor.split('.')[0], args.ligand.split('.')[0])
 
-    main(receptor_file_name, ligand_file_name, solvate=args.solvate)
+    main(receptor_file_name, ligand_file_name, setup_directory_name, solvate=args.solvate)
