@@ -145,7 +145,7 @@ def pull_close(receptor_oemol, ligand_oemol, min_bound, max_bound):
 
 # Main function
 #----------------------------
-def main(receptor_file_name, ligand_file_name, setup_directory_name, solvate=False):
+def setup_yank_calculation(receptor_file_name, ligand_file_name, setup_directory_name, solvate=False):
 
     # Cleanup setup directory
     if os.path.exists(setup_directory_name):
@@ -215,4 +215,4 @@ if __name__ == '__main__':
     ligand_file_name = os.path.join(LIGANDS_DIR, args.ligand)
     setup_directory_name = os.path.join(SETUP_DIR, args.receptor.split('.')[0], args.ligand.split('.')[0])
 
-    main(receptor_file_name, ligand_file_name, setup_directory_name, solvate=args.solvate)
+    setup_yank_calculation(receptor_file_name, ligand_file_name, setup_directory_name, solvate=args.solvate)
