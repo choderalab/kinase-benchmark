@@ -1,7 +1,7 @@
 from pdbfixer import PDBFixer
 from simtk.openmm.app import PDBFile
 
-fixer = PDBFixer(filename='3UE4.pdb')
+fixer = PDBFixer(pdbid='3UE4')
 
 fixer.removeChains(chainIds=['B'])
 
@@ -13,6 +13,6 @@ fixer.addMissingAtoms()
 
 fixer.removeHeterogens(keepWater=False)
 
-fixer.addMissingHydrogens(7.0)
+#fixer.addMissingHydrogens(7.0)
 
-PDBFile.writeFile(fixer.topology, fixer.positions, open('3UE4-pdbfixer.pdb', 'w'))
+PDBFile.writeFile(fixer.topology, fixer.positions, open('../kinases/3UE4-pdbfixer.pdb', 'w'))
