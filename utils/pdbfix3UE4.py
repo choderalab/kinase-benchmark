@@ -15,4 +15,4 @@ fixer.removeHeterogens(keepWater=False)
 
 #fixer.addMissingHydrogens(7.0)
 
-PDBFile.writeFile(fixer.topology, fixer.positions, open('../kinases/3UE4-pdbfixer.pdb', 'w'))
+PDBFile.writeFile(fixer.topology, fixer.positions, open('../kinases/abl/3UE4-pdbfixer.pdb', 'w'))
