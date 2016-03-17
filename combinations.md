@@ -13,15 +13,15 @@
     * **(LATER)** MSM states: dissect contributions of reorganizing energy
   * which construct? 1/2
   * which protonation state? 2
-    *DFG Asp (should not affect thermodynamics)
+    * DFG Asp (should not affect thermodynamics)
   * which phosphorylation state? 2
-    *phosphotyrosine in activation loop (pTyr)
+    * phosphotyrosine in activation loop (pTyr)
   * **(LATER)** mutants
 * FDA approved inhibitors:
   * select noncovalent inhibitors in their active forms
   * which tautomeric/protonation state?
-    *pick states with epik penalty <= 6kT
-    *relevant epik conformation for imatinib is 0
+    * pick states with epik penalty <= 6kT
+    * relevant epik conformation for imatinib is 0
   * **(LATER)** torsions parametrization?
 * solvents:
   * explicit: PME, RF
